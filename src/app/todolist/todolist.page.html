@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-button (click)="edit()">
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Todo View</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-item>
+      <ion-label>Selecione a data</ion-label>
+      <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="dataseleciona" ></ion-datetime>
+    </ion-item>
+  
+  
+    <ion-item>
+      <ion-label>Selecione atividade</ion-label>
+      <ion-segment scrollable [(ngModel)]="activity">
+  
+        <ion-segment-button value="Prova">
+          <ion-label>Prova</ion-label>
+        </ion-segment-button>
+  
+        <ion-segment-button checked  value="Trabalho">
+          <ion-label>Trabalho</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Digite a descrição</ion-label>
+      <ion-input [(ngModel)]="description"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Digite o conteúdo</ion-label>
+      <ion-input [(ngModel)]="content"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Selecione o status</ion-label>
+      <ion-segment scrollable [(ngModel)]="status">
+  
+        <ion-segment-button checked value="false">
+          <ion-label>A Fazer</ion-label>
+        </ion-segment-button>
+  
+        <ion-segment-button value="true">
+          <ion-label>Finalizada</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-item>
+  
+  
+    <ion-button fill="outline" expand="block" color="danger" (click)="delete()">Excluir</ion-button>
+  </ion-content>

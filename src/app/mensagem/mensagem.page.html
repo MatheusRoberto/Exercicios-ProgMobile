@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Mensagem</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p *ngIf="mensagem.length < 5">Informe 5 Caracteres!</p>
+  <ion-item>
+    <ion-label position="floating">Digite a frase</ion-label>
+    <ion-input [(ngModel)]="mensagem"></ion-input>
+  </ion-item>
+</ion-content>

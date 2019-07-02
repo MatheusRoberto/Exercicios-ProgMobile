@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Page Uno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [ngClass]="classes()" [ngStyle]="background()">
+    <p>Teste de Cor</p>
+  </div>
+  <ion-button color="medium" (click)="mudarCor('red')">VERMELHO</ion-button>
+  <ion-button color="medium" (click)="mudarCor('blue')">AZUL</ion-button>
+  <ion-button color="medium" (click)="mudarCor('green')">VERDE</ion-button>
+</ion-content>
