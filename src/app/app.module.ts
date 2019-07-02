@@ -18,6 +18,8 @@ import { SqlProvider } from 'ionic-query-interface';
 
 import { HttpModule } from '@angular/http';
 
+import { Facebook } from '@ionic-native/facebook/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [ModalPage, TodolistPage],
@@ -29,6 +31,7 @@ import { HttpModule } from '@angular/http';
     ModalPageModule,
     TodolistPageModule],
   providers: [
+    Facebook,
     SQLite,
     SqlProvider,
     StatusBar,

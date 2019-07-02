@@ -1,0 +1,11 @@
+<ion-content>
+  <div *ngIf="usuario.logado === false" class="usuario">
+    <h2>Bem vindo</h2>
+    <ion-button expand="block" size="large" color="primary" (click)="login()">Entrar com Facebook</ion-button>
+  </div>
+  <div *ngIf="usuario.logado !== false" class="usuario">
+    <img [src]="usuario.foto" class="foto" />
+    <h2>Olá {{ usuario.nome }}</h2>
+    <ion-button fill="clear" (click)="sair()">Sair</ion-button>
+  </div>
+</ion-content>
